@@ -1,6 +1,6 @@
 {
   "name": "@mezielabs/laravel-mix",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Laravel Mix Wrapper for AdonisJS",
   "main": "build/providers/MixProvider.js",
   "files": [
@@ -13,7 +13,7 @@
     "clean": "del build",
     "commit": "git-cz",
     "compile": "npm run lint && npm run clean && tsc",
-    "copyfiles": "copyfiles \"templates/**/*.js\" build",
+    "copyfiles": "copyfiles \"templates/**/*\" build",
     "lint": "eslint . --ext=.ts",
     "prepublishOnly": "npm run build",
     "release": "np"
@@ -56,7 +56,7 @@
   "adonisjs": {
     "instructions": "./build/instructions.js",
     "providers": [
-      "@slynova/symfony-encore"
+      "@mezielabs/laravel-mix"
     ]
   },
   "devDependencies": {
