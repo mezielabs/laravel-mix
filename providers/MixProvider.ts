@@ -15,9 +15,11 @@ export default class MixProvider {
           return
         }
 
+        const path = assetPath.startsWith('/') ? assetPath : `/${assetPath}`
+
         const manifest = require(Application.publicPath('mix-manifest.json'))
 
-        return manifest[assetPath]
+        return manifest[path]
       })
     })
   }
