@@ -2,7 +2,7 @@
 
 import * as sinkStatic from '@adonisjs/sink'
 import { ApplicationContract } from '@ioc:Adonis/Core/Application'
-// import { join } from 'path'
+import { join } from 'path'
 
 /**
  * Instructions to be executed when setting up the package.
@@ -25,7 +25,7 @@ export default async function instructions (
   /**
    * Copy webpack config file
    */
-  // sink.utils.copyFiles(join(__dirname, 'templates'), projectRoot, ['webpack.mix.js'])
+  sink.utils.copyFiles(join(__dirname, 'templates'), projectRoot, ['webpack.mix.js'])
 
   /**
    * Install required dependencies
